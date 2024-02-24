@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3 id="date"></h3>
+  <button id="button" style="height: 100px;
+  width: 100px;"></button>
+  <script>
+   
+   let btn=document.querySelector('#button');
+   let count=0;
+   btn.addEventListener("click", myFunction);
+
+    function myFunction()
+    {
+      count++;
+      document.btn.style='#fff';
+      btn.innerText=count;
+    }
+
+
+
+
+
+    let date=new Date();
+    let currTime=date.getHours();
+    let result= document.querySelector('#date');
+    if(currTime>0 && currTime<12)
+    {
+      result.innerText=`Shivam Good Morning`;
+    }
+    else if(currTime>12 && currTime<18)
+    {
+      result.innerText=`Shivam Good Afternoon`;
+    }
+    else{
+      result.innerText=`Shivam Good Night `;
+    }
+   
+    
+
+
+    console.log(currTime);
+  </script>
+</body>
+</html>
